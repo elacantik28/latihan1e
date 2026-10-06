@@ -1,0 +1,565 @@
+/* =================== */
+/* PENGATURAN DASAR HALAMAN */
+/* =================== */
+
+body{
+    background-color: #FFC0CB;
+    font-family: arial, sans-serif;
+
+    color: #000000;
+
+    margin: 0px;
+
+    padding: 0px;
+}
+
+
+
+/* =================== */
+/* CONTAINER UTAMA */
+/* =================== */
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+}
+/* =================== */
+/* JUDUL UTAMA */
+/* =================== */
+
+h1 {
+    color:#800020;
+
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* SUB JUDUL */
+/* =================== */
+h2{
+    color:#800020;
+
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+/* =================== */
+/* PARAGRAF */
+/* =================== */
+
+p{
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+}
+/* =================== */
+/* FOTO IDENTITAS */
+/* =================== */
+.identitas {
+    width: 100%;
+}
+.kolom-foto{
+    vertical-align: top;
+
+    padding-right: 40px;
+
+}
+.kolom-identitas{
+    vertical-align: top;
+}
+.foto-profil{
+    width: 150px;
+
+    border: 6px solid #FF69B4;
+    padding: 6px;
+}
+.data-identitas td{
+    padding: 5px;
+}
+
+/* =================== */
+/* LIST */
+/* =================== */
+ul,
+ol{
+    line-height: 1.8;
+}
+/* =================== */
+/* TABEL MATAKULIAH */
+/* =================== */
+
+.tabel-matakuliah{
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 15px;
+    margin-bottom: 20px;
+    
+}
+.tabel-matakuliah th{
+    background-color:#800020;
+    color:ghostwhite;
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+
+.tabel-matakuliah td{
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+/* =================== */
+/* LINK */
+/* =================== */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    text-decoration: underline;
+}
+/* =================== */
+/* FORM */
+/* =================== */
+form {
+    background-color: #f1f5f9;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #cccccc;
+}
+/* KELOMPOK UNIT */
+
+.form-group{
+    margin-bottom: 15px;
+}
+/* label form */
+label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+/* input,select dan textarea */
+input,
+select,
+textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid#ccccc;
+    box-sizing: border-box;
+}
+
+/* textarea */
+textarea{
+    resize: vertical;
+}
+
+/* ===========BUTTON============== */
+button{
+    background-color: #800020;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color:#800020 ;
+}
+/* ===========FOOTER============== */
+.footer{
+    text-align: center;
+    color: #FFC0CB;
+    margin-top: 30px;
+}
+.grid-informasi{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap: :20px;
+    margin-top:25px;
+    margin-bottom:25px;
+
+}
+.card{
+    background-color:pink;
+    padding:20px;
+    border:1px solid #dddddd;
+}/* =================== */
+/* PENGATURAN DASAR HALAMAN */
+/* =================== */
+
+body{
+    background-color: #FFC0CB;
+    font-family: arial, sans-serif;
+
+    color: #000000;
+
+    margin: 0px;
+
+    padding: 0px;
+}
+
+
+
+/* =================== */
+/* CONTAINER UTAMA */
+/* =================== */
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+}
+/* =================== */
+/* JUDUL UTAMA */
+/* =================== */
+
+h1 {
+    color:#800020;
+
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* SUB JUDUL */
+/* =================== */
+h2{
+    color:#800020;
+
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+/* =================== */
+/* PARAGRAF */
+/* =================== */
+
+p{
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+}
+/* =================== */
+/* FOTO IDENTITAS */
+/* =================== */
+.identitas {
+    width: 100%;
+}
+.kolom-foto{
+    vertical-align: top;
+
+    padding-right: 40px;
+
+}
+.kolom-identitas{
+    vertical-align: top;
+}
+.foto-profil{
+    width: 150px;
+
+    border: 6px solid #FF69B4;
+    padding: 6px;
+}
+.data-identitas td{
+    padding: 5px;
+}
+
+/* =================== */
+/* LIST */
+/* =================== */
+ul,
+ol{
+    line-height: 1.8;
+}
+/* =================== */
+/* TABEL MATAKULIAH */
+/* =================== */
+
+.tabel-matakuliah{
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 15px;
+    margin-bottom: 20px;
+    
+}
+.tabel-matakuliah th{
+    background-color:#800020;
+    color:ghostwhite;
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+
+.tabel-matakuliah td{
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+/* =================== */
+/* LINK */
+/* =================== */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    text-decoration: underline;
+}
+/* =================== */
+/* FORM */
+/* =================== */
+form {
+    background-color: #f1f5f9;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #cccccc;
+}
+/* KELOMPOK UNIT */
+
+.form-group{
+    margin-bottom: 15px;
+}
+/* label form */
+label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+/* input,select dan textarea */
+input,
+select,
+textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid#ccccc;
+    box-sizing: border-box;
+}
+
+/* textarea */
+textarea{
+    resize: vertical;
+}
+
+/* ===========BUTTON============== */
+button{
+    background-color: #800020;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color:#800020 ;
+}
+/* ===========FOOTER============== */
+.footer{
+    text-align: center;
+    color: #FFC0CB;
+    margin-top: 30px;
+}
+.grid-informasi{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap: :20px;
+    margin-top:25px;
+    margin-bottom:25px;
+
+}
+.card{
+    background-color:pink;
+    padding:20px;
+    border:1px solid #dddddd;
+}/* =================== */
+/* PENGATURAN DASAR HALAMAN */
+/* =================== */
+
+body{
+    background-color: #FFC0CB;
+    font-family: arial, sans-serif;
+
+    color: #000000;
+
+    margin: 0px;
+
+    padding: 0px;
+}
+
+
+
+/* =================== */
+/* CONTAINER UTAMA */
+/* =================== */
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+}
+/* =================== */
+/* JUDUL UTAMA */
+/* =================== */
+
+h1 {
+    color:#800020;
+
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* SUB JUDUL */
+/* =================== */
+h2{
+    color:#800020;
+
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+/* =================== */
+/* PARAGRAF */
+/* =================== */
+
+p{
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+}
+/* =================== */
+/* FOTO IDENTITAS */
+/* =================== */
+.identitas {
+    width: 100%;
+}
+.kolom-foto{
+    vertical-align: top;
+
+    padding-right: 40px;
+
+}
+.kolom-identitas{
+    vertical-align: top;
+}
+.foto-profil{
+    width: 150px;
+
+    border: 6px solid #FF69B4;
+    padding: 6px;
+}
+.data-identitas td{
+    padding: 5px;
+}
+
+/* =================== */
+/* LIST */
+/* =================== */
+ul,
+ol{
+    line-height: 1.8;
+}
+/* =================== */
+/* TABEL MATAKULIAH */
+/* =================== */
+
+/* JUDUL TABEL */
+h2 {
+    margin-top: 40px; /* kasih jarak dari paragraf atas */
+    margin-bottom: 15px;
+}
+
+/* TABELNYA */
+.tabel-matakuliah {
+    width: 100%;
+    border-collapse: separate; /* JANGAN pakai collapse kalau mau berjarak */
+    border-spacing: 0; /* jarak antar sel 0, tapi baris tetap bisa kasih jarak pakai margin */
+    margin-top: 10px;
+    margin-bottom: 40px; /* ini yang bikin jarak jauh ke TARGET DAN CITA-CITA */
+}
+
+.tabel-matakuliah th {
+    background-color: #800020;
+    color: ghostwhite;
+    padding: 12px 10px;
+    border: 1px solid #cccccc;
+}
+
+.tabel-matakuliah td {
+    padding: 12px 10px;
+    border: 1px solid #cccccc;
+}s
+}
+/* =================== */
+/* LINK */
+/* =================== */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    text-decoration: underline;
+}
+/* =================== */
+/* FORM */
+/* =================== */
+form {
+    background-color: #f1f5f9;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #cccccc;
+}
+/* KELOMPOK UNIT */
+
+.form-group{
+    margin-bottom: 15px;
+}
+/* label form */
+label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+/* input,select dan textarea */
+input,
+select,
+textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid#ccccc;
+    box-sizing: border-box;
+}
+
+/* textarea */
+textarea{
+    resize: vertical;
+}
+
+/* ===========BUTTON============== */
+button{
+    background-color: #800020;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color:#800020 ;
+}
+/* ===========FOOTER============== */
+.footer{
+    text-align: center;
+    color: #FFC0CB;
+    margin-top: 30px;
+}
+.grid-informasi{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap: :20px;
+    margin-top:25px;
+    margin-bottom:25px;
+
+}
+.card{
+    background-color:pink;
+    padding:20px;
+    border:1px solid #dddddd;
