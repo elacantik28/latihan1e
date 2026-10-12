@@ -5,7 +5,9 @@ body{
   color: #333;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
+* { box-sizing: border-box; }
 .container {
   width: 85%;
   max-width: 900px;
@@ -15,6 +17,11 @@ body{
   border-radius: 15px;
   box-shadow: 0 10px 40px rgba(128,0,32,0.15);
   overflow: hidden;
+  animation: fadeUp 1s ease-out;
+}
+@keyframes fadeUp{
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 h1 {
   background: linear-gradient(135deg, #800020, #c00030);
@@ -34,9 +41,13 @@ h2{
   border-bottom: 3px solid #800020;
   padding-bottom: 6px;
   margin-top: 35px;
+  animation: slideKanan 0.8s ease-out;
+  animation-fill-mode: both;
 }
-
-/* FOTO DAN IDENTITAS */
+@keyframes slideKanan{
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
 .IDENTITAS{
   width: 90%;
   margin: 20px auto;
@@ -54,22 +65,24 @@ h2{
   background: white;
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  animation: fotoFloat 3s ease-in-out infinite;
+  transition: all 0.4s ease;
 }
-.kolom-identitas{
-  vertical-align: top;
+.foto-profil:hover{
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 10px 25px rgba(15,118,110,0.4);
 }
-.data-identitas td{
-  padding: 6px 8px;
+@keyframes fotoFloat{
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
-hr{
-  border: 0;
-  height: 1px;
-  background: #e0c0c5;
-  margin-top: 25px;
-}
-ul, ol{ line-height: 1.8; }
+.kolom-identitas{ vertical-align: top; }
+.data-identitas td{ padding: 6px 8px; }
+.data-identitas tr{ transition: 0.3s; }
+.data-identitas tr:hover{ background: #f0fdfa; }
 
-/* TABEL MATAKULIAH */
+hr{ border: 0; height: 1px; background: #e0c0c5; margin-top: 25px; }
+ul, ol{ line-height: 1.8; }
 .tabel-matakuliah{
   width: 100%;
   border-collapse: collapse;
@@ -82,14 +95,10 @@ ul, ol{ line-height: 1.8; }
   padding: 10px;
   border: 1px solid #ccc;
 }
-.tabel-matakuliah td{
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-
-/* LINK, FORM, BUTTON, FOOTER */
+.tabel-matakuliah td{ padding: 10px; border: 1px solid #ccc; }
+.tabel-matakuliah tr{ transition: 0.3s; }
+.tabel-matakuliah tr:hover{ background: #f8d7dc; }
 a { color: #0066cc; text-decoration: none; }
-a:hover{ text-decoration: underline; }
 form {
   background-color: #f1f5f9;
   padding: 20px;
@@ -104,7 +113,6 @@ input, select, textarea{
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-textarea{ resize: vertical; }
 .grup-tombol{ display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
 button{
   border: none;
@@ -113,8 +121,13 @@ button{
   font-weight: bold;
   cursor: pointer;
 }
-button[type="submit"]{ background: #25D366; color: white; }
+button[type="submit"]{ background: #25D366; color: white; animation: denyut 2s infinite; }
 button[type="reset"]{ background: transparent; color: #800020; border: 2px solid #800020; }
+@keyframes denyut{
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
 .footer{ text-align: center; color: #800020; margin-top: 30px; }
 .grid-informasi{
   display:grid;
@@ -130,115 +143,36 @@ button[type="reset"]{ background: transparent; color: #800020; border: 2px solid
   border-radius: 8px;
 }
 
-/* === FIX BIAR RAPI DI HP - TEMPEL PALING BAWAH === */
-* { box-sizing: border-box; }
-body{ overflow-x: hidden; }
-
-/* Biar di HP judul boleh turun baris, tidak maksa */
+/* === FIX RAPI DI HP - HARUS PALING BAWAH === */
 @media (max-width: 768px){
   h1{
     white-space: normal !important;
     animation: none !important;
+    font-size: 20px !important;
+    letter-spacing: 1px !important;
+  }
+  .container{ width: 95% !important; }
+  .container h2, .container h3, .container p, .container table, .container ul, .container hr{
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+  /* FOTO DI ATAS, IDENTITAS DI BAWAH */
+  .IDENTITAS, .IDENTITAS tbody, .IDENTITAS tr, .IDENTITAS td{
+    display: block !important;
     width: 100% !important;
-    font-size: 22px !important;
-    line-height: 1.3;
   }
-  /* Kotak HOBY BIDANG biar turun ke bawah, tidak kepotong */
-  .container > div[style*="display:flex"], 
-  .hobi-bidang, .keahlian-container {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 15px !important;
-    justify-content: center !important;
-  }
-  .container > div[style*="display:flex"] > div,
-  .hobi-box, .bidang-box {
+  .kolom-foto{
     width: 100% !important;
-    max-width: 320px !important;
-    flex: none !important;
+    padding: 0 !important;
+    text-align: center !important;
+    margin-bottom: 15px !important;
   }
-  .tabel-matakuliah{
-    width: 100% !important;
-    font-size: 13px !important;
+  .foto-profil{
+    margin: 0 auto !important;
+    width: 160px !important;
   }
-  p, li {
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
+  .grid-informasi{
+    grid-template-columns: 1fr !important;
   }
-}/* ========== ANIMASI CANTIK UNTUK CV ELA ========== */
-
-/* 1. Halaman muncul halus dari bawah */
-.container{
-  animation: fadeUp 1s ease-out;
-}
-@keyframes fadeUp{
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* 2. Foto profil goyang halus dan ada cahaya */
-.foto-profil{
-  animation: fotoFloat 3s ease-in-out infinite;
-  transition: all 0.4s ease;
-}
-.foto-profil:hover{
-  transform: scale(1.08) rotate(2deg);
-  box-shadow: 0 10px 25px rgba(15,118,110,0.4);
-  border-color: #14b8a6 !important;
-}
-@keyframes fotoFloat{
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-/* 3. Judul CURRICULUM VITAE ketik-ketik */
-h1{
-  overflow: hidden;
-  white-space: nowrap;
-  animation: ketik 2.5s steps(20, end);
-}
-@keyframes ketik{
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-/* 4. Setiap judul muncul satu-satu */
-h2{
-  animation: slideKanan 0.8s ease-out;
-  animation-fill-mode: both;
-}
-h2:nth-of-type(1){ animation-delay: 0.3s; }
-h2:nth-of-type(2){ animation-delay: 0.5s; }
-h2:nth-of-type(3){ animation-delay: 0.7s; }
-@keyframes slideKanan{
-  from { opacity: 0; transform: translateX(-30px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-/* 5. Baris identitas nyala pas di sentuh */
-.data-identitas tr{
-  transition: 0.3s;
-}
-.data-identitas tr:hover{
-  background: #f0fdfa;
-  transform: translateX(8px);
-}
-
-/* 6. Tabel mata kuliah barisnya naik */
-.tabel-matakuliah tr{
-  transition: 0.3s;
-}
-.tabel-matakuliah tr:hover{
-  background: #ccfbf1;
-  transform: scale(1.02);
-}
-
-/* 7. Tombol kirim berdenyut */
-button[type="submit"]{
-  animation: denyut 2s infinite;
-}
-@keyframes denyut{
-  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
-  70% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
-  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+  .tabel-matakuliah{ font-size: 12px !important; }
 }
