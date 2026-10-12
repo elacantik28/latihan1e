@@ -1,17 +1,13 @@
-/* =======================
-   PENGATURAN DASAR HALAMAN
-   ======================= */
+/* ===== CV ELA - VERSI BERSIH RAPI HP & LAPTOP ===== */
+* { box-sizing: border-box; }
 body{
   background-color: #fdf2f4;
   font-family: 'Segoe UI', Arial, sans-serif;
   color: #333;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
-
-/* =======================
-   CONTAINER UTAMA
-   ======================= */
 .container {
   width: 85%;
   max-width: 900px;
@@ -22,49 +18,36 @@ body{
   box-shadow: 0 10px 40px rgba(128,0,32,0.15);
   overflow: hidden;
 }
-
-/* =======================
-   JUDUL UTAMA
-   ======================= */
 h1 {
   background: linear-gradient(135deg, #800020, #c00030);
   color: white !important;
   text-align: center;
   margin: 0 0 20px 0;
-  padding: 25px 0;
+  padding: 25px 10px;
   letter-spacing: 2px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
-
-/* Semua isi selain h1 dikasih padding */
 .container h2, .container h3, .container p, 
 .container table, .container ul, .container hr{
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
-
 h2{
   color: #800020;
   border-bottom: 3px solid #800020;
   padding-bottom: 6px;
   margin-top: 35px;
 }
-
-/* =======================
-   FOTO DAN IDENTITAS - INI YANG BIKIN SEJAJAR
-   ======================= */
 .IDENTITAS{
   width: 90%;
   margin: 20px auto;
   border-collapse: collapse;
 }
-
 .kolom-foto{
   width: 190px;
   vertical-align: top;
-  padding-right: 30px;
+  padding-right: 25px;
+  text-align: center;
 }
-
 .foto-profil{
   width: 170px;
   border: 6px solid #800020;
@@ -72,585 +55,84 @@ h2{
   background: white;
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-  transition: 0.3s;
 }
-
-.foto-profil:hover{
-  transform: scale(1.05) rotate(1deg);
-}
-
-.kolom-identitas{
-  vertical-align: top;
-}
-
-.data-identitas td{
-  padding: 6px 8px;
-}
-
-.data-identitas tr:hover{
-  background: #fff0f3;
-}
-
-hr{
-  border: 0;
-  height: 1px;
-  background: #e0c0c5;
-  margin-top: 25px;
-}/* =================== */
-/* LIST */
-/* =================== */
-ul,
-ol{
-    line-height: 1.8;
-}
-/* =================== */
-/* TABEL MATAKULIAH */
-/* =================== */
-
+.kolom-identitas{ vertical-align: top; }
+.data-identitas td{ padding: 6px 8px; }
+.data-identitas tr:hover{ background: #fff0f3; }
+hr{ border:0; height:1px; background:#e0c0c5; margin-top:25px; }
+ul, ol{ line-height: 1.8; }
 .tabel-matakuliah{
-    width: 100%;
-
-    border-collapse: collapse;
-
-    margin-top: 15px;
-    margin-bottom: 20px;
-    
-}
-.tabel-matakuliah th{
-    background-color:#800020;
-    color:ghostwhite;
-    padding: 10px;
-    border: 1px solid #cccccc;
-}
-
-.tabel-matakuliah td{
-    padding: 10px;
-    border: 1px solid #cccccc;
-}
-/* =================== */
-/* LINK */
-/* =================== */
-a {
-    color: #0066cc;
-    text-decoration: none;
-}
-a:hover{
-    color: white;
-    text-decoration: underline;
-}
-/* =================== */
-/* FORM */
-/* =================== */
-form {
-    background-color: #f1f5f9;
-    padding: 20px;
-    margin-top: 20px;
-    border: 1px solid #cccccc;
-}
-/* KELOMPOK UNIT */
-
-.form-group{
-    margin-bottom: 15px;
-}
-/* label form */
-label{
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-/* input,select dan textarea */
-input,
-select,
-textarea{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid#ccccc;
-    box-sizing: border-box;
-}
-
-/* textarea */
-textarea{
-    resize: vertical;
-}
-
-/* ===========BUTTON============== */
-button{
-    background-color: #800020;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    margin-right: 10px;
-    cursor: pointer;
-}
-button:hover{
-    background-color:#800020 ;
-}
-/* ===========FOOTER============== */
-.footer{
-    text-align: center;
-    color: #FFC0CB;
-    margin-top: 30px;
-}
-.grid-informasi{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    grid-gap: :20px;
-    margin-top:25px;
-    margin-bottom:25px;
-
-}
-.card{
-    background-color:pink;
-    padding:20px;
-    border:1px solid #dddddd;
-}/* =================== */
-/* PENGATURAN DASAR HALAMAN */
-/* =================== */
-
-body{
-    background-color: #FFC0CB;
-    font-family: arial, sans-serif;
-
-    color: #000000;
-
-    margin: 0px;
-
-    padding: 0px;
-}
-
-
-
-/* =================== */
-/* CONTAINER UTAMA */
-/* =================== */
-
-.container {
-    width: 80%;
-    margin: 30px auto;
-    padding: 30px;
-    background-color: white;
-}
-/* =================== */
-/* JUDUL UTAMA */
-/* =================== */
-
-h1 {
-    color:#800020;
-
-    text-align: center;
-    margin-bottom: 20px;
-}
-/* SUB JUDUL */
-/* =================== */
-h2{
-    color:#800020;
-
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-/* =================== */
-/* PARAGRAF */
-/* =================== */
-
-p{
-    font-size: 16px;
-    line-height: 1.7;
-    text-align: justify;
-}
-/* =================== */
-/* FOTO IDENTITAS */
-/* =================== */
-.identitas {
-    width: 100%;
-}
-.kolom-foto{
-    vertical-align: top;
-
-    padding-right: 40px;
-
-}
-.kolom-identitas{
-    vertical-align: top;
-}
-.foto-profil{
-    width: 150px;
-
-    border: 6px solid #FF69B4;
-    padding: 6px;
-}
-.data-identitas td{
-    padding: 5px;
-}
-
-/* =================== */
-/* LIST */
-/* =================== */
-ul,
-ol{
-    line-height: 1.8;
-}
-/* =================== */
-/* TABEL MATAKULIAH */
-/* =================== */
-
-.tabel-matakuliah{
-    width: 100%;
-
-    border-collapse: collapse;
-
-    margin-top: 40px;
-    margin-bottom: 40px;
-    
-}
-.tabel-matakuliah th{
-    background-color:#800020;
-    color:ghostwhite;
-    padding: 10px;
-    border: 1px solid #cccccc;
-}
-
-.tabel-matakuliah td{
-    padding: 10px;
-    border: 1px solid #cccccc;
-}
-/* =================== */
-/* LINK */
-/* =================== */
-a {
-    color: #0066cc;
-    text-decoration: none;
-}
-a:hover{
-    color: white;
-    text-decoration: underline;
-}
-/* =================== */
-/* FORM */
-/* =================== */
-form {
-    background-color: #f1f5f9;
-    padding: 20px;
-    margin-top: 20px;
-    border: 1px solid #cccccc;
-}
-/* KELOMPOK UNIT */
-
-.form-group{
-    margin-bottom: 15px;
-}
-/* label form */
-label{
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-/* input,select dan textarea */
-input,
-select,
-textarea{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid#ccccc;
-    box-sizing: border-box;
-}
-
-/* textarea */
-textarea{
-    resize: vertical;
-}
-
-/* ===========BUTTON============== */
-button{
-    background-color: #800020;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    margin-right: 10px;
-    cursor: pointer;
-}
-button:hover{
-    background-color:#800020 ;
-}
-/* ===========FOOTER============== */
-.footer{
-    text-align: center;
-    color: #FFC0CB;
-    margin-top: 30px;
-}
-.grid-informasi{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    grid-gap: :20px;
-    margin-top:25px;
-    margin-bottom:25px;
-
-}
-.card{
-    background-color:pink;
-    padding:20px;
-    border:1px solid #dddddd;
-}/* =================== */
-/* PENGATURAN DASAR HALAMAN */
-/* =================== */
-
-body{
-    background-color: #FFC0CB;
-    font-family: arial, sans-serif;
-
-    color: #000000;
-
-    margin: 0px;
-
-    padding: 0px;
-}
-
-
-
-/* =================== */
-/* CONTAINER UTAMA */
-/* =================== */
-
-.container {
-    width: 80%;
-    margin: 30px auto;
-    padding: 30px;
-    background-color: white;
-}
-/* =================== */
-/* JUDUL UTAMA */
-/* =================== */
-
-h1 {
-    color:#800020;
-
-    text-align: center;
-    margin-bottom: 20px;
-}
-/* SUB JUDUL */
-/* =================== */
-h2{
-    color:#800020;
-
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-/* =================== */
-/* PARAGRAF */
-/* =================== */
-
-p{
-    font-size: 16px;
-    line-height: 1.7;
-    text-align: justify;
-}
-/* =================== */
-/* FOTO IDENTITAS */
-/* =================== */
-.IDENTITAS{
   width: 100%;
   border-collapse: collapse;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
-.kolom-foto{
-  vertical-align: top;
-  width: 190px;
-  padding-right: 40px;
-}
-.kolom-identitas{
-  vertical-align: top;
-}
-.foto-profil{
-  width: 170px;
-  border: 6px solid #800020;
-  padding: 4px;
-  background: white;
-  border-radius: 6px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-.foto-profil{
-  width: 170px;
-  border: 6px solid #800020;
-  padding: 4px;
-  background: white;
-  border-radius: 6px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-.data-identitas td{
-    padding: 5px;
-}
-
-/* =================== */
-/* LIST */
-/* =================== */
-ul,
-ol{
-    line-height: 1.8;
-}
-/* =================== */
-/* TABEL MATAKULIAH */
-/* =================== */
-
-/* JUDUL TABEL */
-h2 {
-    margin-top: 40px; /* kasih jarak dari paragraf atas */
-    margin-bottom: 15px;
-}
-
-/* TABELNYA */
-=.tabel-matakuliah{
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 30px;     /* jarak dari H2 di atasnya */
-  margin-bottom: 40px;  /* jarak ke TARGET DAN CITA-CITA */
-}
-
-.tabel-matakuliah th,
-.tabel-matakuliah td{
+.tabel-matakuliah th{
+  background-color:#800020;
+  color:white;
   padding: 10px;
   border: 1px solid #ccc;
-  text-decoration: none;
 }
-
-.tabel-matakuliah th{
-  background-color: #800020;
-  color: white;
-}s
-}
-/* =================== */
-/* LINK */
-/* =================== */
-a {
-    color: #0066cc;
-    text-decoration: none;
-}
-a:hover{
-    color: white;
-    text-decoration: underline;
-}
-/* =================== */
-/* FORM */
-/* =================== */
+.tabel-matakuliah td{ padding: 10px; border: 1px solid #ccc; }
+a { color: #0066cc; text-decoration: none; }
+a:hover{ text-decoration: underline; }
 form {
-    background-color: #f1f5f9;
-    padding: 20px;
-    margin-top: 20px;
-    border: 1px solid #cccccc;
-}
-/* KELOMPOK UNIT */
-
-.form-group{
-    margin-bottom: 15px;
-}
-/* label form */
-label{
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-/* input,select dan textarea */
-input,
-select,
-textarea{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid#ccccc;
-    box-sizing: border-box;
-}
-
-/* textarea */
-textarea{
-    resize: vertical;
-}
-
-/* ===========BUTTON=========== */
-.grup-tombol{
-  display: flex;
-  gap: 12px;
+  background-color: #f1f5f9;
+  padding: 20px;
   margin-top: 20px;
+  border: 1px solid #ccc;
 }
-
+.form-group{ margin-bottom: 15px; }
+label{ display: block; font-weight: bold; margin-bottom: 5px; }
+input, select, textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+textarea{ resize: vertical; }
+.grup-tombol{ display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
 button{
   border: none;
   padding: 12px 28px;
   border-radius: 50px;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
-
-/* Tombol Kirim - Hijau WhatsApp */
-button[type="submit"]{
-  background: #25D366;
-  color: white;
-  box-shadow: 0 4px 12px rgba(37,211,102,0.4);
-}
-
-button[type="submit"]:hover{
-  background: #128C7E;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(37,211,102,0.6);
-}
-
-/* Tombol Reset - Outline Maroon */
-button[type="reset"]{
-  background: transparent;
-  color: #800020;
-  border: 2px solid #800020;
-}
-
-button[type="reset"]:hover{
-  background: #800020;
-  color: white;
-}
-/* ===========FOOTER============== */
-.footer{
-    text-align: center;
-    color: #FFC0CB;
-    margin-top: 30px;
-}
+button[type="submit"]{ background: #25D366; color: white; }
+button[type="reset"]{ background: transparent; color: #800020; border: 2px solid #800020; }
+.footer{ text-align: center; color: #800020; margin-top: 30px; }
 .grid-informasi{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    grid-gap: :20px;
-    margin-top:25px;
-    margin-bottom:25px;
-
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap: 20px;
+  margin-top:25px;
+  margin-bottom:25px;
 }
 .card{
-    background-color:pink;
-    padding:20px;
-    border:1px solid #dddddd;
-    /* === FIX BIAR RAPI DI HP === */
-table.IDENTITAS {
-  width: 100%;
-}
-.kolom-foto {
-  width: 200px;
-  padding: 20px;
-  vertical-align: top;
-}
-.kolom-identitas {
-  padding: 20px;
-  vertical-align: top;
-}
-.foto-profil {
-  width: 150px;
-  height: auto;
-  border-radius: 10px;
+  background-color:pink;
+  padding:20px;
+  border:1px solid #ddd;
+  border-radius: 8px;
 }
 
-@media (max-width: 768px) {
-  .container {
-    width: 95% !important;
-    overflow: visible !important;
+/* ===== FIX RAPI DI HP - WAJIB PALING BAWAH ===== */
+@media (max-width: 768px){
+  .container{ width: 95% !important; }
+  h1{ font-size: 20px !important; padding: 20px 10px !important; }
+  .container h2, .container h3, .container p, .container table, .container ul, .container hr{
+    margin-left: 15px !important;
+    margin-right: 15px !important;
   }
-  table.IDENTITAS, 
-  table.IDENTITAS tr, 
-  table.IDENTITAS td {
-    display: block;
+  .IDENTITAS, .IDENTITAS tbody, .IDENTITAS tr, .IDENTITAS td{
+    display: block !important;
     width: 100% !important;
   }
-  .kolom-foto {
-    width: 100%;
-    text-align: center;
+  .kolom-foto{
+    width: 100% !important;
+    padding: 0 0 15px 0 !important;
   }
+  .foto-profil{ margin: 0 auto !important; display: block !important; }
+  .grid-informasi{ grid-template-columns: 1fr !important; }
+  .tabel-matakuliah{ font-size: 12px !important; }
 }
