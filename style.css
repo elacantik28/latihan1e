@@ -616,3 +616,40 @@ table.IDENTITAS, table.data-identitas {
     font-size: 22px;
   }
 }
+/* FIX HOBY BIDANG MINAT RAPI DI HP */
+p{
+  text-align:left !important;
+  word-spacing:normal !important;
+}
+.grid-informasi{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:15px !important;
+  margin:20px 0 !important;
+}
+.card{
+  background:#ffd6e0 !important;
+  padding:15px !important;
+  border-radius:12px !important;
+  text-align:left !important;
+}
+.card ul{
+  padding-left:18px !important;
+  margin:0 !important;
+}
+.card li{
+  text-align:left !important;
+  margin-bottom:6px !important;
+  line-height:1.4 !important;
+}
+
+/* KHUSUS DI HP JADI 1 KOLOM KE BAWAH - INI KUNCINYA */
+@media(max-width:768px){
+  .grid-informasi{
+    grid-template-columns:1fr !important;
+  }
+  .card{
+    width:100% !important;
+    display:block !important;
+  }
+}
