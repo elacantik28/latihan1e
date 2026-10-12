@@ -130,7 +130,7 @@ button[type="reset"]{ background: transparent; color: #800020; border: 2px solid
   border-radius: 8px;
 }
 
-/* === FIX HP YANG BENAR - BIAR SEPERTI PUNYA TEMANMU === */
+/* === mode HP === */
 @media (max-width: 768px) {
   .container {
     width: 95% !important;
@@ -142,6 +142,7 @@ button[type="reset"]{ background: transparent; color: #800020; border: 2px solid
     margin-right: 15px !important;
   }
   /* Hanya kolom foto dan identitas yang turun, bukan isi dalamnya */
+
   table.IDENTITAS > tbody > tr {
     display: block !important;
     width: 100% !important;
@@ -157,6 +158,7 @@ button[type="reset"]{ background: transparent; color: #800020; border: 2px solid
     margin-bottom: 15px;
   }
   /* Tabel Nama Lengkap : Ela... tetap 1 baris */
+
   table.data-identitas,
   table.data-identitas tbody,
   table.data-identitas tr {
@@ -176,4 +178,81 @@ button[type="reset"]{ background: transparent; color: #800020; border: 2px solid
   table.data-identitas td:nth-child(2) {
     width: 10px !important;
   }
+}
+/* ========== ANIMASI CANTIK UNTUK CV ELA ========== */
+
+/* 1. Halaman muncul halus dari bawah */
+.container{
+  animation: fadeUp 1s ease-out;
+}
+@keyframes fadeUp{
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 2. Foto profil goyang halus dan ada cahaya */
+.foto-profil{
+  animation: fotoFloat 3s ease-in-out infinite;
+  transition: all 0.4s ease;
+}
+.foto-profil:hover{
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 10px 25px rgba(15,118,110,0.4);
+  border-color: #14b8a6 !important;
+}
+@keyframes fotoFloat{
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* 3. Judul CURRICULUM VITAE ketik-ketik */
+h1{
+  overflow: hidden;
+  white-space: nowrap;
+  animation: ketik 2.5s steps(20, end);
+}
+@keyframes ketik{
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* 4. Setiap judul muncul satu-satu */
+h2{
+  animation: slideKanan 0.8s ease-out;
+  animation-fill-mode: both;
+}
+h2:nth-of-type(1){ animation-delay: 0.3s; }
+h2:nth-of-type(2){ animation-delay: 0.5s; }
+h2:nth-of-type(3){ animation-delay: 0.7s; }
+@keyframes slideKanan{
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* 5. Baris identitas nyala pas di sentuh */
+.data-identitas tr{
+  transition: 0.3s;
+}
+.data-identitas tr:hover{
+  background: #f0fdfa;
+  transform: translateX(8px);
+}
+
+/* 6. Tabel mata kuliah barisnya naik */
+.tabel-matakuliah tr{
+  transition: 0.3s;
+}
+.tabel-matakuliah tr:hover{
+  background: #ccfbf1;
+  transform: scale(1.02);
+}
+
+/* 7. Tombol kirim berdenyut */
+button[type="submit"]{
+  animation: denyut 2s infinite;
+}
+@keyframes denyut{
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
 }
