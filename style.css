@@ -1,83 +1,102 @@
-/* =================== */
-/* PENGATURAN DASAR HALAMAN */
-/* =================== */
-
+/* =======================
+   PENGATURAN DASAR HALAMAN
+   ======================= */
 body{
-    background-color: #FFC0CB;
-    font-family: arial, sans-serif;
-
-    color: #000000;
-
-    margin: 0px;
-
-    padding: 0px;
+  background-color: #fdf2f4;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-
-
-/* =================== */
-/* CONTAINER UTAMA */
-/* =================== */
-
+/* =======================
+   CONTAINER UTAMA
+   ======================= */
 .container {
-    width: 80%;
-    margin: 30px auto;
-    padding: 30px;
-    background-color: white;
+  width: 85%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 0 30px 0;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(128,0,32,0.15);
+  overflow: hidden;
 }
-/* =================== */
-/* JUDUL UTAMA */
-/* =================== */
 
+/* =======================
+   JUDUL UTAMA
+   ======================= */
 h1 {
-    color:#800020;
-
-    text-align: center;
-    margin-bottom: 20px;
+  background: linear-gradient(135deg, #800020, #c00030);
+  color: white !important;
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 25px 0;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
-/* SUB JUDUL */
-/* =================== */
+
+/* Semua isi selain h1 dikasih padding */
+.container h2, .container h3, .container p, 
+.container table, .container ul, .container hr{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
 h2{
-    color:#800020;
+  color: #800020;
+  border-bottom: 3px solid #800020;
+  padding-bottom: 6px;
+  margin-top: 35px;
+}
 
-    margin-top: 30px;
-    margin-bottom: 15px;
+/* =======================
+   FOTO DAN IDENTITAS - INI YANG BIKIN SEJAJAR
+   ======================= */
+.IDENTITAS{
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
 }
-/* =================== */
-/* PARAGRAF */
-/* =================== */
 
-p{
-    font-size: 16px;
-    line-height: 1.7;
-    text-align: justify;
-}
-/* =================== */
-/* FOTO IDENTITAS */
-/* =================== */
-.identitas {
-    width: 100%;
-}
 .kolom-foto{
-    vertical-align: top;
-
-    padding-right: 40px;
-
+  width: 190px;
+  vertical-align: top;
+  padding-right: 30px;
 }
-.kolom-identitas{
-    vertical-align: top;
-}
+
 .foto-profil{
-    width: 150px;
-
-    border: 6px solid #FF69B4;
-    padding: 6px;
+  width: 170px;
+  border: 6px solid #800020;
+  padding: 5px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transition: 0.3s;
 }
+
+.foto-profil:hover{
+  transform: scale(1.05) rotate(1deg);
+}
+
+.kolom-identitas{
+  vertical-align: top;
+}
+
 .data-identitas td{
-    padding: 5px;
+  padding: 6px 8px;
 }
 
-/* =================== */
+.data-identitas tr:hover{
+  background: #fff0f3;
+}
+
+hr{
+  border: 0;
+  height: 1px;
+  background: #e0c0c5;
+  margin-top: 25px;
+}/* =================== */
 /* LIST */
 /* =================== */
 ul,
@@ -279,8 +298,8 @@ ol{
 
     border-collapse: collapse;
 
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     
 }
 .tabel-matakuliah th{
@@ -427,23 +446,33 @@ p{
 /* =================== */
 /* FOTO IDENTITAS */
 /* =================== */
-.identitas {
-    width: 100%;
+.IDENTITAS{
+  width: 100%;
+  border-collapse: collapse;
 }
 .kolom-foto{
-    vertical-align: top;
-
-    padding-right: 40px;
-
+  vertical-align: top;
+  width: 190px;
+  padding-right: 40px;
 }
 .kolom-identitas{
-    vertical-align: top;
+  vertical-align: top;
 }
 .foto-profil{
-    width: 150px;
-
-    border: 6px solid #FF69B4;
-    padding: 6px;
+  width: 170px;
+  border: 6px solid #800020;
+  padding: 4px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.foto-profil{
+  width: 170px;
+  border: 6px solid #800020;
+  padding: 4px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 .data-identitas td{
     padding: 5px;
@@ -467,24 +496,23 @@ h2 {
 }
 
 /* TABELNYA */
-.tabel-matakuliah {
-    width: 100%;
-    border-collapse: separate; /* JANGAN pakai collapse kalau mau berjarak */
-    border-spacing: 0; /* jarak antar sel 0, tapi baris tetap bisa kasih jarak pakai margin */
-    margin-top: 10px;
-    margin-bottom: 40px; /* ini yang bikin jarak jauh ke TARGET DAN CITA-CITA */
+=.tabel-matakuliah{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;     /* jarak dari H2 di atasnya */
+  margin-bottom: 40px;  /* jarak ke TARGET DAN CITA-CITA */
 }
 
-.tabel-matakuliah th {
-    background-color: #800020;
-    color: ghostwhite;
-    padding: 12px 10px;
-    border: 1px solid #cccccc;
+.tabel-matakuliah th,
+.tabel-matakuliah td{
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-decoration: none;
 }
 
-.tabel-matakuliah td {
-    padding: 12px 10px;
-    border: 1px solid #cccccc;
+.tabel-matakuliah th{
+  background-color: #800020;
+  color: white;
 }s
 }
 /* =================== */
@@ -533,17 +561,45 @@ textarea{
     resize: vertical;
 }
 
-/* ===========BUTTON============== */
-button{
-    background-color: #800020;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    margin-right: 10px;
-    cursor: pointer;
+/* ===========BUTTON=========== */
+.grup-tombol{
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
 }
-button:hover{
-    background-color:#800020 ;
+
+button{
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Tombol Kirim - Hijau WhatsApp */
+button[type="submit"]{
+  background: #25D366;
+  color: white;
+  box-shadow: 0 4px 12px rgba(37,211,102,0.4);
+}
+
+button[type="submit"]:hover{
+  background: #128C7E;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37,211,102,0.6);
+}
+
+/* Tombol Reset - Outline Maroon */
+button[type="reset"]{
+  background: transparent;
+  color: #800020;
+  border: 2px solid #800020;
+}
+
+button[type="reset"]:hover{
+  background: #800020;
+  color: white;
 }
 /* ===========FOOTER============== */
 .footer{
