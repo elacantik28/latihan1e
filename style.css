@@ -130,7 +130,7 @@ button[type="reset"]{ background: transparent; color: #800020; border: 2px solid
   border-radius: 8px;
 }
 
-/* === FIX HP BIAR TIDAK KEPOTONG - INI KUNCINYA === */
+/* === FIX HP YANG BENAR - BIAR SEPERTI PUNYA TEMANMU === */
 @media (max-width: 768px) {
   .container {
     width: 95% !important;
@@ -138,26 +138,42 @@ button[type="reset"]{ background: transparent; color: #800020; border: 2px solid
   }
   .container h2, .container h3, .container p, 
   .container table, .container ul, .container hr{
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
   }
-  table.IDENTITAS, 
-  table.IDENTITAS tbody,
-  table.IDENTITAS tr, 
-  table.IDENTITAS td {
+  /* Hanya kolom foto dan identitas yang turun, bukan isi dalamnya */
+  table.IDENTITAS > tbody > tr {
+    display: block !important;
+    width: 100% !important;
+  }
+  table.IDENTITAS > tbody > tr > td.kolom-foto,
+  table.IDENTITAS > tbody > tr > td.kolom-identitas {
     display: block !important;
     width: 100% !important;
   }
   .kolom-foto {
-    width: 100% !important;
     padding-right: 0 !important;
     text-align: center;
     margin-bottom: 15px;
   }
-  .foto-profil{
-    margin: 0 auto;
+  /* Tabel Nama Lengkap : Ela... tetap 1 baris */
+  table.data-identitas,
+  table.data-identitas tbody,
+  table.data-identitas tr {
+    display: table !important;
+    width: 100% !important;
   }
-  .grid-informasi{
-    grid-template-columns: 1fr;
+  table.data-identitas tr {
+    display: table-row !important;
+  }
+  table.data-identitas td {
+    display: table-cell !important;
+    width: auto !important;
+  }
+  table.data-identitas td:first-child {
+    width: 130px !important;
+  }
+  table.data-identitas td:nth-child(2) {
+    width: 10px !important;
   }
 }
