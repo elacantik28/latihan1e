@@ -130,56 +130,42 @@ button[type="reset"]{ background: transparent; color: #800020; border: 2px solid
   border-radius: 8px;
 }
 
-/* === mode HP === */
-@media (max-width: 768px) {
-  .container {
-    width: 95% !important;
-    overflow: visible !important;
-  }
-  .container h2, .container h3, .container p, 
-  .container table, .container ul, .container hr{
-    margin-left: 15px !important;
-    margin-right: 15px !important;
-  }
-  /* Hanya kolom foto dan identitas yang turun, bukan isi dalamnya */
+/* === FIX BIAR RAPI DI HP - TEMPEL PALING BAWAH === */
+* { box-sizing: border-box; }
+body{ overflow-x: hidden; }
 
-  table.IDENTITAS > tbody > tr {
-    display: block !important;
+/* Biar di HP judul boleh turun baris, tidak maksa */
+@media (max-width: 768px){
+  h1{
+    white-space: normal !important;
+    animation: none !important;
     width: 100% !important;
+    font-size: 22px !important;
+    line-height: 1.3;
   }
-  table.IDENTITAS > tbody > tr > td.kolom-foto,
-  table.IDENTITAS > tbody > tr > td.kolom-identitas {
-    display: block !important;
+  /* Kotak HOBY BIDANG biar turun ke bawah, tidak kepotong */
+  .container > div[style*="display:flex"], 
+  .hobi-bidang, .keahlian-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 15px !important;
+    justify-content: center !important;
+  }
+  .container > div[style*="display:flex"] > div,
+  .hobi-box, .bidang-box {
     width: 100% !important;
+    max-width: 320px !important;
+    flex: none !important;
   }
-  .kolom-foto {
-    padding-right: 0 !important;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  /* Tabel Nama Lengkap : Ela... tetap 1 baris */
-
-  table.data-identitas,
-  table.data-identitas tbody,
-  table.data-identitas tr {
-    display: table !important;
+  .tabel-matakuliah{
     width: 100% !important;
+    font-size: 13px !important;
   }
-  table.data-identitas tr {
-    display: table-row !important;
+  p, li {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
   }
-  table.data-identitas td {
-    display: table-cell !important;
-    width: auto !important;
-  }
-  table.data-identitas td:first-child {
-    width: 130px !important;
-  }
-  table.data-identitas td:nth-child(2) {
-    width: 10px !important;
-  }
-}
-/* ========== ANIMASI CANTIK UNTUK CV ELA ========== */
+}/* ========== ANIMASI CANTIK UNTUK CV ELA ========== */
 
 /* 1. Halaman muncul halus dari bawah */
 .container{
