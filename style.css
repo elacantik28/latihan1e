@@ -1,107 +1,572 @@
-/* ===== CV ELA - VERSI BERSIH RAPI HP & LAPTOP ===== */
-* { box-sizing: border-box; }
+/* =================== */
+/* PENGATURAN DASAR HALAMAN */
+/* =================== */
+
 body{
-  background-color: #fdf2f4;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+    background-color: #FFC0CB;
+    font-family: arial, sans-serif;
+
+    color: #000000;
+
+    margin: 0px;
+
+    padding: 0px;
 }
+
+
+
+/* =================== */
+/* CONTAINER UTAMA */
+/* =================== */
+
 .container {
-  width: 85%;
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 0 0 30px 0;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 10px 40px rgba(128,0,32,0.15);
-  overflow: hidden;
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
 }
+/* =================== */
+/* JUDUL UTAMA */
+/* =================== */
+
 h1 {
-  background: linear-gradient(135deg, #800020, #c00030);
-  color: white !important;
-  text-align: center;
-  margin: 0 0 20px 0;
-  padding: 25px 10px;
-  letter-spacing: 2px;
+    color:#800020;
+
+    text-align: center;
+    margin-bottom: 20px;
 }
-.container h2, .container h3, .container p, 
-.container table, .container ul, .container hr{
-  margin-left: 25px;
-  margin-right: 25px;
-}
+/* SUB JUDUL */
+/* =================== */
 h2{
-  color: #800020;
-  border-bottom: 3px solid #800020;
-  padding-bottom: 6px;
-  margin-top: 35px;
+    color:#800020;
+
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
-.IDENTITAS{
-  width: 90%;
-  margin: 20px auto;
-  border-collapse: collapse;
+/* =================== */
+/* PARAGRAF */
+/* =================== */
+
+p{
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+}
+/* =================== */
+/* FOTO IDENTITAS */
+/* =================== */
+.identitas {
+    width: 100%;
 }
 .kolom-foto{
-  width: 190px;
-  vertical-align: top;
-  padding-right: 25px;
-  text-align: center;
+    vertical-align: top;
+
+    padding-right: 40px;
+
+}
+.kolom-identitas{
+    vertical-align: top;
 }
 .foto-profil{
-  width: 170px;
-  border: 6px solid #800020;
-  padding: 5px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    width: 150px;
+
+    border: 6px solid #FF69B4;
+    padding: 6px;
 }
-.kolom-identitas{ vertical-align: top; }
-.data-identitas td{ padding: 6px 8px; }
-.data-identitas tr:hover{ background: #fff0f3; }
-hr{ border:0; height:1px; background:#e0c0c5; margin-top:25px; }
-ul, ol{ line-height: 1.8; }
+.data-identitas td{
+    padding: 5px;
+}
+
+/* =================== */
+/* LIST */
+/* =================== */
+ul,
+ol{
+    line-height: 1.8;
+}
+/* =================== */
+/* TABEL MATAKULIAH */
+/* =================== */
+
 .tabel-matakuliah{
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-  margin-bottom: 20px;
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 15px;
+    margin-bottom: 20px;
+    
 }
 .tabel-matakuliah th{
-  background-color:#800020;
-  color:white;
-  padding: 10px;
-  border: 1px solid #ccc;
+    background-color:#800020;
+    color:ghostwhite;
+    padding: 10px;
+    border: 1px solid #cccccc;
 }
-.tabel-matakuliah td{ padding: 10px; border: 1px solid #ccc; }
-a { color: #0066cc; text-decoration: none; }
-a:hover{ text-decoration: underline; }
+
+.tabel-matakuliah td{
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+/* =================== */
+/* LINK */
+/* =================== */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    text-decoration: underline;
+}
+/* =================== */
+/* FORM */
+/* =================== */
 form {
-  background-color: #f1f5f9;
-  padding: 20px;
+    background-color: #f1f5f9;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #cccccc;
+}
+/* KELOMPOK UNIT */
+
+.form-group{
+    margin-bottom: 15px;
+}
+/* label form */
+label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+/* input,select dan textarea */
+input,
+select,
+textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid#ccccc;
+    box-sizing: border-box;
+}
+
+/* textarea */
+textarea{
+    resize: vertical;
+}
+
+/* ===========BUTTON============== */
+button{
+    background-color: #800020;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color:#800020 ;
+}
+/* ===========FOOTER============== */
+.footer{
+    text-align: center;
+    color: #FFC0CB;
+    margin-top: 30px;
+}
+.grid-informasi{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap: :20px;
+    margin-top:25px;
+    margin-bottom:25px;
+
+}
+.card{
+    background-color:pink;
+    padding:20px;
+    border:1px solid #dddddd;
+}/* =================== */
+/* PENGATURAN DASAR HALAMAN */
+/* =================== */
+
+body{
+    background-color: #FFC0CB;
+    font-family: arial, sans-serif;
+
+    color: #000000;
+
+    margin: 0px;
+
+    padding: 0px;
+}
+
+
+
+/* =================== */
+/* CONTAINER UTAMA */
+/* =================== */
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+}
+/* =================== */
+/* JUDUL UTAMA */
+/* =================== */
+
+h1 {
+    color:#800020;
+
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* SUB JUDUL */
+/* =================== */
+h2{
+    color:#800020;
+
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+/* =================== */
+/* PARAGRAF */
+/* =================== */
+
+p{
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+}
+/* =================== */
+/* FOTO IDENTITAS */
+/* =================== */
+.identitas {
+    width: 100%;
+}
+.kolom-foto{
+    vertical-align: top;
+
+    padding-right: 40px;
+
+}
+.kolom-identitas{
+    vertical-align: top;
+}
+.foto-profil{
+    width: 150px;
+
+    border: 6px solid #FF69B4;
+    padding: 6px;
+}
+.data-identitas td{
+    padding: 5px;
+}
+
+/* =================== */
+/* LIST */
+/* =================== */
+ul,
+ol{
+    line-height: 1.8;
+}
+/* =================== */
+/* TABEL MATAKULIAH */
+/* =================== */
+
+.tabel-matakuliah{
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 15px;
+    margin-bottom: 20px;
+    
+}
+.tabel-matakuliah th{
+    background-color:#800020;
+    color:ghostwhite;
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+
+.tabel-matakuliah td{
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+/* =================== */
+/* LINK */
+/* =================== */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    text-decoration: underline;
+}
+/* =================== */
+/* FORM */
+/* =================== */
+form {
+    background-color: #f1f5f9;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #cccccc;
+}
+/* KELOMPOK UNIT */
+
+.form-group{
+    margin-bottom: 15px;
+}
+/* label form */
+label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+/* input,select dan textarea */
+input,
+select,
+textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid#ccccc;
+    box-sizing: border-box;
+}
+
+/* textarea */
+textarea{
+    resize: vertical;
+}
+
+/* ===========BUTTON============== */
+button{
+    background-color: #800020;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color:#800020 ;
+}
+/* ===========FOOTER============== */
+.footer{
+    text-align: center;
+    color: #FFC0CB;
+    margin-top: 30px;
+}
+.grid-informasi{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap: :20px;
+    margin-top:25px;
+    margin-bottom:25px;
+
+}
+.card{
+    background-color:pink;
+    padding:20px;
+    border:1px solid #dddddd;
+}/* =================== */
+/* PENGATURAN DASAR HALAMAN */
+/* =================== */
+
+body{
+    background-color: #FFC0CB;
+    font-family: arial, sans-serif;
+
+    color: #000000;
+
+    margin: 0px;
+
+    padding: 0px;
+}
+
+
+
+/* =================== */
+/* CONTAINER UTAMA */
+/* =================== */
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+}
+/* =================== */
+/* JUDUL UTAMA */
+/* =================== */
+
+h1 {
+    color:#800020;
+
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* SUB JUDUL */
+/* =================== */
+h2{
+    color:#800020;
+
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+/* =================== */
+/* PARAGRAF */
+/* =================== */
+
+p{
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+}
+/* =================== */
+/* FOTO IDENTITAS */
+/* =================== */
+.identitas {
+    width: 100%;
+}
+.kolom-foto{
+    vertical-align: top;
+
+    padding-right: 40px;
+
+}
+.kolom-identitas{
+    vertical-align: top;
+}
+.foto-profil{
+    width: 150px;
+
+    border: 6px solid #FF69B4;
+    padding: 6px;
+}
+.data-identitas td{
+    padding: 5px;
+}
+
+/* =================== */
+/* LIST */
+/* =================== */
+ul,
+ol{
+    line-height: 1.8;
+}
+/* =================== */
+/* TABEL MATAKULIAH */
+/* =================== */
+
+/* JUDUL TABEL */
+h2 {
+    margin-top: 40px; /* kasih jarak dari paragraf atas */
+    margin-bottom: 15px;
+}
+
+/* TABELNYA */
+.tabel-matakuliah {
+    width: 100%;
+    border-collapse: separate; /* JANGAN pakai collapse kalau mau berjarak */
+    border-spacing: 0; /* jarak antar sel 0, tapi baris tetap bisa kasih jarak pakai margin */
+    margin-top: 10px;
+    margin-bottom: 40px; /* ini yang bikin jarak jauh ke TARGET DAN CITA-CITA */
+}
+
+.tabel-matakuliah th {
+    background-color: #800020;
+    color: ghostwhite;
+    padding: 12px 10px;
+    border: 1px solid #cccccc;
+}
+
+.tabel-matakuliah td {
+    padding: 12px 10px;
+    border: 1px solid #cccccc;
+}s
+}
+/* =================== */
+/* LINK */
+/* =================== */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    text-decoration: underline;
+}
+/* =================== */
+/* FORM */
+/* =================== */
+form {
+    background-color: #f1f5f9;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #cccccc;
+}
+/* KELOMPOK UNIT */
+
+.form-group{
+    margin-bottom: 15px;
+}
+/* label form */
+label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+/* input,select dan textarea */
+input,
+select,
+textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid#ccccc;
+    box-sizing: border-box;
+}
+
+/* textarea */
+textarea{
+    resize: vertical;
+}
+
+/* ===========BUTTON============== */
+.grup-tombol{
+  display: flex;
+  gap: 12px;
   margin-top: 20px;
-  border: 1px solid #ccc;
 }
-.form-group{ margin-bottom: 15px; }
-label{ display: block; font-weight: bold; margin-bottom: 5px; }
-input, select, textarea{
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-textarea{ resize: vertical; }
-.grup-tombol{ display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
 button{
   border: none;
   padding: 12px 28px;
   border-radius: 50px;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.3s;
 }
-button[type="submit"]{ background: #25D366; color: white; }
-button[type="reset"]{ background: transparent; color: #800020; border: 2px solid #800020; }
-.footer{ text-align: center; color: #800020; margin-top: 30px; }
+button[type="submit"]{
+  background-color: #25D366 !important; /* Hijau WhatsApp */
+  color: white;
+}
+button[type="submit"]:hover{
+  background-color: #128C7E !important;
+}
+button[type="reset"]{
+  background-color: #ff6b81 !important; /* Pink Delete */
+  color: white;
+}
+button[type="reset"]:hover{
+  background-color: #ff4757 !important;
+}
+/* ===========FOOTER============== */
+.footer{
+  text-align: center;
+  color: #800020;
+  margin-top: 30px;
+}
 .grid-informasi{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -112,27 +577,53 @@ button[type="reset"]{ background: transparent; color: #800020; border: 2px solid
 .card{
   background-color:pink;
   padding:20px;
-  border:1px solid #ddd;
-  border-radius: 8px;
+  border:1px solid #dddddd;
+  border-radius: 10px;
 }
-
-/* ===== FIX RAPI DI HP - WAJIB PALING BAWAH ===== */
-@media (max-width: 768px){
-  .container{ width: 95% !important; }
-  h1{ font-size: 20px !important; padding: 20px 10px !important; }
-  .container h2, .container h3, .container p, .container table, .container ul, .container hr{
+/* === FIX HP YANG BENAR - BIAR SEPERTI PUNYA TEMANMU === */
+@media (max-width: 768px) {
+  .container {
+    width: 95% !important;
+    overflow: visible !important;
+  }
+  .container h2, .container h3, .container p, 
+  .container table, .container ul, .container hr{
     margin-left: 15px !important;
     margin-right: 15px !important;
   }
-  .IDENTITAS, .IDENTITAS tbody, .IDENTITAS tr, .IDENTITAS td{
+  /* Hanya kolom foto dan identitas yang turun, bukan isi dalamnya */
+  table.IDENTITAS > tbody > tr {
     display: block !important;
     width: 100% !important;
   }
-  .kolom-foto{
+  table.IDENTITAS > tbody > tr > td.kolom-foto,
+  table.IDENTITAS > tbody > tr > td.kolom-identitas {
+    display: block !important;
     width: 100% !important;
-    padding: 0 0 15px 0 !important;
   }
-  .foto-profil{ margin: 0 auto !important; display: block !important; }
-  .grid-informasi{ grid-template-columns: 1fr !important; }
-  .tabel-matakuliah{ font-size: 12px !important; }
+  .kolom-foto {
+    padding-right: 0 !important;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  /* Tabel Nama Lengkap : Ela... tetap 1 baris */
+  table.data-identitas,
+  table.data-identitas tbody,
+  table.data-identitas tr {
+    display: table !important;
+    width: 100% !important;
+  }
+  table.data-identitas tr {
+    display: table-row !important;
+  }
+  table.data-identitas td {
+    display: table-cell !important;
+    width: auto !important;
+  }
+  table.data-identitas td:first-child {
+    width: 130px !important;
+  }
+  table.data-identitas td:nth-child(2) {
+    width: 10px !important;
+  }
 }
