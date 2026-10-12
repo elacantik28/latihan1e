@@ -619,3 +619,38 @@ button[type="reset"]:hover{
     background-color:pink;
     padding:20px;
     border:1px solid #dddddd;
+    /* === FIX BIAR RAPI DI HP === */
+table.IDENTITAS {
+  width: 100%;
+}
+.kolom-foto {
+  width: 200px;
+  padding: 20px;
+  vertical-align: top;
+}
+.kolom-identitas {
+  padding: 20px;
+  vertical-align: top;
+}
+.foto-profil {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95% !important;
+    overflow: visible !important;
+  }
+  table.IDENTITAS, 
+  table.IDENTITAS tr, 
+  table.IDENTITAS td {
+    display: block;
+    width: 100% !important;
+  }
+  .kolom-foto {
+    width: 100%;
+    text-align: center;
+  }
+}
